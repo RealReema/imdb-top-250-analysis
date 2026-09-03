@@ -10,6 +10,11 @@ Analyzing the IMDb Top 250 Movies dataset with Python, and comparing it against 
 - Compared my Letterboxd ratings to the IMDb average for movies I've rated
 - Checked which genres I watch most out of the Top 250
 
+<img width="1000" height="600" alt="budget_vs_revenue" src="https://github.com/user-attachments/assets/58f9bce0-c8a3-41c3-ba0a-0ea3cbf9e6f4" />
+<img width="1000" height="600" alt="my_ratings_vs_imdb" src="https://github.com/user-attachments/assets/1ad4d618-85e2-4e84-9ad2-592584eef781" />
+<img width="1000" height="600" alt="genres_watched" src="https://github.com/user-attachments/assets/dca1cae6-1268-4836-9bdc-db63fa8cd2a1" />
+
+
 ## What I found
 
 Budget vs revenue isn't a straight line - some cheap movies (Rocky, Gone with the Wind) made way more relative to their budget than expensive ones.
