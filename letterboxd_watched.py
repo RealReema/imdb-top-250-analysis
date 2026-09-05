@@ -2,6 +2,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import ast
 
+plt.rcParams['figure.facecolor'] = '#050505'
+plt.rcParams['axes.facecolor'] = '#050505'
+plt.rcParams['savefig.facecolor'] = '#050505'
+plt.rcParams['text.color'] = '#d4d2d8'
+plt.rcParams['axes.labelcolor'] = '#d4d2d8'
+plt.rcParams['xtick.color'] = '#777777'
+plt.rcParams['ytick.color'] = '#777777'
+plt.rcParams['axes.edgecolor'] = '#333333'
 watched = pd.read_csv('watched.csv')
 imdb = pd.read_csv('imdb_top_250.csv')
 
@@ -18,10 +26,11 @@ genre_counts = all_genres.value_counts()
 print(genre_counts)
 
 plt.figure(figsize=(10, 6))
-plt.bar(genre_counts.index, genre_counts.values, color='purple')
+plt.bar(genre_counts.index, genre_counts.values, color='#5608CC')
 plt.xlabel('Genre')
 plt.ylabel('Count')
 plt.title('Genres Watched from IMDb Top 250')
 plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
+plt.savefig('genres_watched.png', dpi=150, bbox_inches='tight')
 plt.show()

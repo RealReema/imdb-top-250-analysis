@@ -1,6 +1,14 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+plt.rcParams['figure.facecolor'] = '#050505'
+plt.rcParams['axes.facecolor'] = '#050505'
+plt.rcParams['savefig.facecolor'] = '#050505'
+plt.rcParams['text.color'] = '#d4d2d8'
+plt.rcParams['axes.labelcolor'] = '#d4d2d8'
+plt.rcParams['xtick.color'] = '#777777'
+plt.rcParams['ytick.color'] = '#777777'
+plt.rcParams['axes.edgecolor'] = '#333333'
 df = pd.read_csv('imdb_top_250.csv')
 
 df['budget'] = pd.to_numeric(df['budget'], errors='coerce')
@@ -28,10 +36,11 @@ for title, correct_budget in currency_fixes.items():
     clean_df.loc[clean_df['primaryTitle'] == title, 'budget'] = correct_budget
 
 plt.figure(figsize=(10, 6))
-plt.scatter(clean_df['budget'], clean_df['grossWorldwide'], alpha=0.6, color='purple')
+plt.scatter(clean_df['budget'], clean_df['grossWorldwide'], alpha=0.6, color='#5608CC')
 plt.xlabel('Budget ($)')
 plt.ylabel('Worldwide Gross ($)')
 plt.title('Budget vs Worldwide Gross - Top 250 IMDb Movies')
+plt.savefig('budget_vs_revenue.png', dpi=150, bbox_inches='tight')
 plt.show()
 
 clean_df['roi_ratio'] = clean_df['grossWorldwide'] / clean_df['budget']
